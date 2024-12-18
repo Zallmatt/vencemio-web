@@ -1,28 +1,31 @@
 /* Contenedor principal */
 .statistics-page {
+  min-height: 100vh; /* Ocupa toda la pantalla */
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  width: 100%; /* Controlamos el ancho del contenedor */
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Título arriba */
   background-image: 
-    linear-gradient(#FFF5CC, #fff5ccb0), /* Capa semitransparente encima */
-    url('../../../public/logoFondo.png'); /* Imagen de fondo */
+    linear-gradient(rgba(255, 245, 204, 0.9), rgba(255, 245, 204, 0.9)),
+    url('../../../public/logoFondo.png'); 
   background-repeat: repeat;
-  background-size: 5%; /* Ajusta la imagen */
+  background-size: 5%;
   background-position: center;
+  filter: brightness(0.95);
 }
 
+/* Contenedor general */
 .statistics-container {
-  width: 90%;
-  max-width: 1200px; /* Ancho máximo para contener los gráficos */
-  margin: 0 auto;
+  width: 95%;
+  max-width: 1400px;
+  margin: 20px auto;
   text-align: center;
   font-family: 'Arial', sans-serif;
 }
 
 /* Título principal */
 .statistics-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #1c802d;
   margin-bottom: 30px;
   text-transform: uppercase;
@@ -30,44 +33,83 @@
 
 /* Sección de gráficos */
 .chart-section {
-  margin-bottom: 30px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
 }
 
-/* Títulos de los gráficos */
+/* Título de cada gráfico */
 .chart-title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #333;
   margin-bottom: 15px;
 }
 
-/* Contenedor de cada gráfico */
+/* Contenedor de gráficos específicos */
 .chart-wrapper {
-  max-width: 500px; /* Reducir el tamaño máximo */
-  width: 100%; /* Gráficos responsivos */
-  height: auto; /* Altura ajustable */
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
   margin: 0 auto;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+  padding: 20px;
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .chart-wrapper:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Eliminar recuadro en gráficos de torta */
+.pie-chart-wrapper {
+  width: 40%;
+  max-width: 900px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.download-button:hover {
+  background-color: #218838;
 }
 
 /* Ajustes responsivos */
 @media (max-width: 768px) {
   .chart-wrapper {
-    max-width: 90%;
-    padding: 10px;
+    height: 400px; /* Reducir altura */
   }
 
+  .statistics-title {
+    font-size: 2.5rem;
+  }
+
+  .chart-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
   .statistics-title {
     font-size: 2rem;
   }
@@ -75,18 +117,8 @@
   .chart-title {
     font-size: 1.3rem;
   }
-}
-
-@media (max-width: 480px) {
-  .statistics-title {
-    font-size: 1.8rem;
-  }
-
-  .chart-title {
-    font-size: 1.2rem;
-  }
 
   .chart-wrapper {
-    padding: 5px;
+    height: 300px; /* Reducir aún más para móviles */
   }
 }
