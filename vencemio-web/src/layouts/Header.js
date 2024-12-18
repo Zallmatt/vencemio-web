@@ -61,18 +61,22 @@ function Header() {
         <button onClick={() => scrollToSection("sobre-nosotros")}>Nosotros</button>
       </nav>
       <div className="header__toggle">
-        <button
-          className={`header__toggle-btn ${userType === "comprador" ? "active" : ""}`}
-          onClick={() => handleToggle("comprador")}
-        >
-          Comprador
-        </button>
-        <button
-          className={`header__toggle-btn ${userType === "empresa" ? "active" : ""}`}
-          onClick={() => handleToggle("empresa")}
-        >
-          Empresa
-        </button>
+        {!(user || superuser) && (
+          <>
+            <button
+              className={`header__toggle-btn ${userType === "comprador" ? "active" : ""}`}
+              onClick={() => handleToggle("comprador")}
+            >
+              Comprador
+            </button>
+            <button
+              className={`header__toggle-btn ${userType === "empresa" ? "active" : ""}`}
+              onClick={() => handleToggle("empresa")}
+            >
+              Empresa
+            </button>
+          </>
+        )}
       </div>
       <div className="header__actions">
         {superuser ? (
@@ -111,7 +115,7 @@ function Header() {
                 className="btn-back-dashboard"
                 onClick={() => navigate("/user-home")}
               >
-                Volver al Dashboard
+                Volver al Catalogo
               </button>
             )}
           </>

@@ -297,11 +297,7 @@ export default function UserHome() {
           <div className="filters">
             <div>
               <label htmlFor="supermarket">Filtrar por Supermercado:</label>
-              <select
-                id="supermarket"
-                value={selectedSuper}
-                onChange={(e) => setSelectedSuper(e.target.value)}
-              >
+              <select id="supermarket" value={selectedSuper} onChange={(e) => setSelectedSuper(e.target.value)}>
                 <option value="">Todos los supermercados</option>
                 {Object.entries(supermarkets).map(([codSuper, data]) => (
                   <option key={codSuper} value={codSuper}>
@@ -313,11 +309,7 @@ export default function UserHome() {
 
             <div>
               <label htmlFor="category">Filtrar por Categoría:</label>
-              <select
-                id="category"
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-              >
+              <select id="category" value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)}>
                 <option value="">Todas las categorías</option>
                 {categories.map((category, index) => (
                   <option key={index} value={category}>
@@ -337,11 +329,17 @@ export default function UserHome() {
                 onChange={(e) => setSearchName(e.target.value)}
               />
             </div>
-            <div>
-              {/* Nuevo botón para el historial de compras */}
+
+            {/* Contenedor para los botones */}
+            <div className="filters-buttons">
               <button onClick={handleGoToHistory} className="btn-history">
                 Historial de Compras
               </button>
+              
+              <button onClick={handleGoToMap} className="mapa-button">
+                Ver mapa
+              </button>
+
               <button onClick={() => setShowPreferences(true)} className="btn-edit-preferences">
                 Editar Preferencias
               </button>
@@ -356,12 +354,10 @@ export default function UserHome() {
               {showPreferences && !user?.uid && (
                 <div>Cargando preferencias...</div>
               )}
-            </div>
 
-            <button onClick={handleGoToMap} className="mapa-button">
-              Ver mapa
-            </button>
+            </div>
           </div>
+
           <div className="favorites-section">
             <h2>Mis Favoritos</h2>
             <div className="product-list">

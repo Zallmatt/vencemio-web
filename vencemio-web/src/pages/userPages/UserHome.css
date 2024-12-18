@@ -22,14 +22,19 @@ h1 {
 
 .filters {
   display: flex;
+  flex-wrap: wrap; /* Permite múltiples filas */
   justify-content: space-between;
   align-items: center;
   gap: 20px;
   padding: 15px;
-  background-color: #fff8e1; /* Fondo claro */
+  background-color: #fff8e1;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 0 15px 20px 15px; /* Espaciado horizontal */
+  margin: 0 15px 20px 15px;
+}
+.filters > div {
+  flex: 1 1 calc(33.33% - 20px); /* Cada filtro ocupa 33% del ancho */
+  min-width: 200px;
 }
 
 .filters label {
@@ -38,21 +43,52 @@ h1 {
   font-size: 16px;
 }
 
-.filters select {
+.filters select,
+.filters input {
+  width: 80%;
   padding: 8px 12px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: white;
   font-size: 14px;
-  transition: border-color 0.3s;
 }
 
-.filters select:focus {
+.filters select:focus,
+.filters input:focus {
   outline: none;
-  border-color: #1c802d; /* Enfoque */
+  border-color: #1c802d;
   box-shadow: 0 0 4px rgba(28, 128, 45, 0.4);
 }
 
+
+/* Contenedor específico para los botones */
+.filters-buttons {
+  display: flex;
+  justify-content: center; /* Centra los botones */
+  gap: 10px; /* Espacio entre botones */
+  margin-top: 10px;
+}
+
+.filters-buttons button {
+  flex: 0 1 200px; /* Tamaño fijo para todos los botones */
+  height: 45px; /* Altura uniforme */
+  padding: 10px 20px;
+  background-color: #1c802d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.filters-buttons button:hover {
+  background-color: #145a20;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.filters-buttons button:active {
+  transform: translateY(2px); /* Efecto de presión */
+}
 .search-bar {
   display: flex;
   justify-content: center;
@@ -73,25 +109,6 @@ h1 {
   outline: none;
   border-color: #1c802d;
   box-shadow: 0 0 4px rgba(28, 128, 45, 0.4);
-}
-
-.map-button {
-  display: block;
-  margin: 30px auto;
-  padding: 12px 25px;
-  background-color: #1c802d; /* Verde oscuro */
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  font-family: 'Arial', sans-serif;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.map-button:hover {
-  background-color: #145a20; /* Verde más oscuro */
 }
 
 .product-list {
@@ -238,57 +255,62 @@ h1 {
   font-size: 16px;
   color: #fff;
 }
-.mapa-button{
-  padding: 10px 20px;
-  background-color: #1c802d; /* Color de fondo */
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-left: 10px;
-  font-weight: bold;
-  border-radius: 5px;
+
+/* Responsividad */
+@media (max-width: 1024px) {
+  h1 {
+    margin-top: 200px;
+    text-align: center;
+    color: #1c802d; /* Verde oscuro */
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 2px;
+  }
+
+  .filters > div {
+    flex: 1 1 calc(50% - 20px); /* Dos columnas */
+  }
+
+  .filters-buttons {
+    flex-wrap: wrap;
+  }
+
+  .filters-buttons button {
+    flex: 1 1 48%; /* Dos botones por fila */
+  }
 }
 
-.mapa-button:hover {
-  background-color: #68a837; /* Un verde más oscuro para hover */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .filters > div {
+    flex: 1 1 100%; /* Ocupan todo el ancho */
+  }
+
+  .filters-buttons {
+    flex-direction: column; /* Botones en columna */
+  }
+
+  .filters-buttons button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  h1 {
+    font-size: 36px; /* Tamaño más pequeño del título */
+  }
 }
 
-.btn-edit-preferences {
-  padding: 10px 20px;
-  background-color: #1c802d; /* Color de fondo */
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-left: 10px;
-  font-weight: bold;
-  border-radius: 5px;
-}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
 
-.btn-edit-preferences:hover {
-  background-color: #68a837; /* Un verde más oscuro para hover */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-}
-
-.btn-edit-preferences:active {
-  transform: translateY(2px); /* Efecto de presión */
-}
-
-.btn-history{
-  padding: 10px 20px;
-  background-color: #1c802d; /* Color de fondo */
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-left: 10px;
-  font-weight: bold;
-  border-radius: 5px;
-}
-.btn-historys:hover {
-  background-color: #68a837; /* Un verde más oscuro para hover */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-}
-
-.btn-history:active {
-  transform: translateY(2px); /* Efecto de presión */
+  .filters {
+    padding: 10px;
+    gap: 10px;
+  }
 }

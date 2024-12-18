@@ -162,10 +162,27 @@ h1 {
   border: none;
   cursor: pointer;
   margin-left: 10px;
+  font-size: 16px;
   font-weight: bold;
   border-radius: 5px;
 }
 
 .statistics-button:hover {
   background-color: #005f73; /* Color de fondo cuando el cursor está sobre el botón */
+}
+
+@media screen and (max-width: 1024px) {
+  .actions {
+    flex-direction: column; /* Los botones se apilan verticalmente */
+    align-items: center; /* Centra los botones */
+  }
+
+  .add-product-button,
+  .notification-button,
+  .statistics-button {
+    width: 60%; /* Ocupan casi todo el ancho disponible */
+    max-width: none; /* Elimina el límite de tamaño máximo */
+    margin: 5px 0; /* Agrega espacio entre los botones */
+  }
+  
 }
