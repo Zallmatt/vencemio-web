@@ -147,6 +147,10 @@ export default function ProductForm() {
 
   const handleAddProduct = async (e) => {
     e.preventDefault();
+    const fechaVencimientoFormatted = fechaVencimiento
+    ? new Date(fechaVencimiento).toISOString().split("T")[0]
+    : null;
+
     const productData = {
       nombre,
       codigo_barra: codigoBarra,
@@ -157,7 +161,7 @@ export default function ProductForm() {
       cod_tipo: idTipo,
       cod_super: superuser.cod_super,
       estado,
-      fecha_vencimiento: new Date(fechaVencimiento).toISOString(),
+      fecha_vencimiento: fechaVencimientoFormatted, // Formato YYYY-MM-DD
       fecha_aviso_vencimiento: parseInt(fechaAvisoVencimiento), // Guardamos el número de días para la alerta
       imagen: imagenURL,
     };
