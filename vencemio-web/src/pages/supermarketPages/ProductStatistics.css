@@ -1,0 +1,92 @@
+/* Contenedor principal */
+.statistics-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%; /* Controlamos el ancho del contenedor */
+  background-image: 
+    linear-gradient(#FFF5CC, #fff5ccb0), /* Capa semitransparente encima */
+    url('../../../public/logoFondo.png'); /* Imagen de fondo */
+  background-repeat: repeat;
+  background-size: 5%; /* Ajusta la imagen */
+  background-position: center;
+}
+
+.statistics-container {
+  width: 90%;
+  max-width: 1200px; /* Ancho máximo para contener los gráficos */
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Título principal */
+.statistics-title {
+  font-size: 2.5rem;
+  color: #1c802d;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+/* Sección de gráficos */
+.chart-section {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Títulos de los gráficos */
+.chart-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Contenedor de cada gráfico */
+.chart-wrapper {
+  max-width: 500px; /* Reducir el tamaño máximo */
+  width: 100%; /* Gráficos responsivos */
+  height: auto; /* Altura ajustable */
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.chart-wrapper:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .chart-wrapper {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .statistics-title {
+    font-size: 2rem;
+  }
+
+  .chart-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .statistics-title {
+    font-size: 1.8rem;
+  }
+
+  .chart-title {
+    font-size: 1.2rem;
+  }
+
+  .chart-wrapper {
+    padding: 5px;
+  }
+}

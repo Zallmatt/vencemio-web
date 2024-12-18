@@ -1,0 +1,248 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1c802d; /* Verde oscuro */
+  color: white;
+  z-index: 1000;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: #fcc40b;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  letter-spacing: 2px;
+  display: inline-block;
+}
+
+.header__nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header__nav button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.header__nav button:hover {
+  background-color: #4c7c54;
+  border-radius: 4px;
+}
+
+.header__nav button.active {
+  font-weight: bold;
+  border-bottom: 2px solid #fcc40b;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header__user-info {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el texto y botón */
+  gap: 10px; /* Espacio entre el texto y el botón */
+  font-size: 16px;
+  color: white; /* Color del texto */
+}
+
+.btn-logout {
+  padding: 5px 10px;
+  background-color: #fcc40b; /* Color amarillo */
+  color: #1c802d; /* Color verde oscuro */
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: #f4c54b; /* Cambio de color al pasar el mouse */
+  color: #1c802d;
+}
+
+.btn-login {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #fcc40b;
+  color: #1c802d;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+  background-color: #f4c54b;
+}
+
+.header__toggle {
+  display: flex;
+  gap: 15px;
+}
+
+.header__toggle-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header__toggle-btn.active {
+  background-color: #fcc40b;
+  color: #1c802d;
+}
+
+.header__toggle-btn:hover {
+  background-color: #f9da5c;
+  color: #1c802d;
+}
+.btn-back-dashboard {
+  padding: 8px 15px;
+  background-color: #fcc40b; /* Amarillo */
+  color: #1c802d; /* Verde oscuro */
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-back-dashboard:hover {
+  background-color: #f4c54b;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .header__nav {
+    margin-top: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header__nav button {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .header__actions {
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .logo-text {
+    font-size: 28px;
+  }
+
+  .btn-login {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .header__toggle {
+    margin-top: 10px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    width: 40px;
+  }
+
+  .logo-text {
+    font-size: 24px;
+  }
+
+  .header__nav {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .header__nav button {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  .header__actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .btn-login {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .header__toggle {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .header__toggle-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-text {
+    font-size: 20px;
+  }
+
+  .header__nav button {
+    font-size: 10px;
+  }
+
+  .btn-login {
+    font-size: 10px;
+  }
+
+  .header__toggle-btn {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+}

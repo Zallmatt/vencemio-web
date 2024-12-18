@@ -1,0 +1,77 @@
+.product-edit-form-page{
+    background-image: linear-gradient(#FFF5CC, #fff5ccef); /* Gradiente amarillo suave */
+}
+.product-edit-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: 
+      linear-gradient(#FFF5CC, #fff5ccb0), /* Capa semitransparente encima */
+      url('../../../public/logoFondo.png'); /* Imagen de fondo */
+    background-repeat: no-repeat;
+    background-size: 40%; /* Ajusta la imagen */
+    background-position: center;
+  }
+  .product-edit-main-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .product-edit-form-title {
+    font-size: 28px;
+    color: #1c802d;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .product-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-edit-form input,
+  .product-edit-form select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .product-edit-form input:focus,
+  .product-edit-form select:focus {
+    outline: none;
+    border: 1px solid #fcc40b;
+    box-shadow: 0 0 5px rgba(252, 196, 11, 0.5);
+  }
+  
+  .product-edit-form-button {
+    padding: 12px;
+    background-color: #1c802d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .product-edit-form-button:hover {
+    background-color: #fcc40b;
+  }
+  
+  .product-edit-form-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  

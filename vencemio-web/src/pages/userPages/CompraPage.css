@@ -1,0 +1,148 @@
+/* General */
+.compra-page {
+  background-image: 
+    linear-gradient(to bottom, #fff5ccf3, #fff5ccf3), /* Capa semitransparente */
+    url('../../../public/logoFondo.png'); /* Imagen de fondo */
+  background-position: center;
+  background-size: 10%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+  padding: 20px; /* Espaciado general */
+  box-sizing: border-box;
+}
+
+.compra-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c6e49; /* Verde principal */
+  text-align: center; /* Alineación centrada */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Product Container */
+.product-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  padding: 30px;
+  background-color: #fffaf0; /* Beige claro */
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  margin: 0 auto; /* Centrado horizontal */
+}
+
+/* Imagen del producto */
+.product-image {
+  width: 220px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 2px solid #e0e0e0;
+  background-color: #fff;
+}
+
+/* Detalles del producto */
+.product-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c6e49;
+  margin-bottom: 10px;
+}
+
+.product-price,
+.product-discount-price,
+.product-total,
+.product-stock {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.product-price span,
+.product-discount-price span {
+  font-weight: bold;
+}
+
+.product-discount-price span {
+  color: #367c34; /* Rojo */
+}
+
+.product-stock {
+  color: #007bff; /* Azul */
+}
+
+.product-total {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2c6e49;
+}
+
+/* Información del supermercado */
+.superuser-details p {
+  margin: 4px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.superuser-details p strong {
+  color: #2c6e49;
+}
+
+/* Cantidad Input */
+.product-quantity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.product-quantity label {
+  font-weight: bold;
+  color: #555;
+}
+
+.product-quantity input {
+  padding: 5px;
+  width: 60px;
+  border: 2px solid #dcdcdc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Botón de compra */
+.buy-button {
+  background-color: #2c6e49;
+  color: white;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  align-self: center; /* Centrado dentro del container */
+}
+
+.buy-button:hover {
+  background-color: #228b22;
+}
+
+.buy-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

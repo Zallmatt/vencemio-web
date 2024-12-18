@@ -1,0 +1,171 @@
+.dashboard-container {
+  background-image: linear-gradient(to bottom, #fff5ccf3, #fff5ccf3),
+    url('../../../public/logoFondo.png');
+  background-position: center;
+  background-size: 10%;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #1c802d;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.filter-section {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.filter-select {
+  margin-left: 10px;
+  padding: 10px;
+}
+
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.logout-button {
+  background-color: #ff5252;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.logout-button:hover {
+  background-color: #e53935;
+}
+
+.edit-button,
+.delete-button {
+  margin-top: 10px;
+  padding: 8px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.delete-button {
+  background-color: #ff5252;
+  color: white;
+}
+.expiring-alert {
+  background-color: #FFF3CD;
+  border: 2px solid #FFD200; /* Amarillo brillante */
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.expiring-product-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.expiring-product-list .card {
+  border: 2px solid #FF5733; /* Borde de alerta en rojo */
+  background-color: #FFEBCC; /* Fondo naranja pálido */
+}
+
+.expiring-product-list .card .card-title {
+  color: #D85F5F; /* Texto de título rojo para resaltar */
+}
+
+.expiring-product-list .card .card-expiration {
+  font-size: 14px;
+  color: #D85F5F; /* Color rojo para fechas de vencimiento */
+}
+
+.action-buttons button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre los botones */
+  margin-bottom: 20px;
+}
+
+.add-product-button,
+.notification-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-product-button {
+  background-color: #1c802d; /* Verde para el botón de agregar producto */
+  color: white;
+  border: none;
+}
+
+.add-product-button:hover {
+  background-color: #145a20; /* Verde más oscuro al pasar el mouse */
+}
+
+.notification-button {
+  background-color: #fcc40b; /* Amarillo para el botón de notificaciones */
+  color: #145a20;
+  border: none;
+}
+
+.notification-button:hover {
+  background-color: #e4b100; /* Amarillo más oscuro al pasar el mouse */
+}
+/* CSS para el botón de Estadísticas */
+.statistics-button {
+  padding: 10px 20px;
+  background-color: #008CBA; /* Color de fondo */
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.statistics-button:hover {
+  background-color: #005f73; /* Color de fondo cuando el cursor está sobre el botón */
+}

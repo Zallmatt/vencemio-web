@@ -1,0 +1,81 @@
+.notification-manager-page {
+  background-image: linear-gradient(#FFF5CC, #fff5ccef); /* Gradiente amarillo suave */
+}
+
+.notification-manager-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: 
+    linear-gradient(#FFF5CC, #fff5ccb0), /* Capa semitransparente encima */
+    url('../../../public/logoFondo.png'); /* Imagen de fondo */
+  background-repeat: no-repeat;
+  background-size: 40%; /* Ajusta la imagen */
+  background-position: center;
+}
+
+.notification-manager-title {
+  font-size: 28px;
+  color: #1c802d;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.notification-manager-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notification-manager-form select,
+.notification-manager-form input,
+.notification-manager-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+}
+
+.notification-manager-form select:focus,
+.notification-manager-form input:focus,
+.notification-manager-form textarea:focus {
+  outline: none;
+  border: 1px solid #fcc40b;
+  box-shadow: 0 0 5px rgba(252, 196, 11, 0.5);
+}
+
+.notification-manager-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notification-manager-button {
+  padding: 12px;
+  background-color: #1c802d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.notification-manager-button:hover {
+  background-color: #fcc40b;
+}
+
+.view-notifications-button:hover {
+  background-color: #e4b100; /* Amarillo más oscuro */
+}
+

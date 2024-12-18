@@ -1,0 +1,56 @@
+.preferences-container {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff5cc;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #1c802d;
+  }
+  
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .category-card {
+    padding: 15px;
+    background-color: white;
+    border: 2px solid #76c043;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .category-card.selected {
+    background-color: #76c043;
+    color: white;
+    border-color: #fcc40b;
+  }
+  
+  .category-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .save-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #1c802d; /* Color de fondo */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .save-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

@@ -1,0 +1,121 @@
+/* Contenedor principal de la página de historial de notificaciones */
+.notification-history-page {
+  background-image: linear-gradient(to bottom, #fff5ccf3, #fff5ccf3), 
+    url('../../../public/logoFondo.png');
+  background-position: center;
+  background-size: 10%;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Contenedor de la sección de historial de notificaciones */
+.notification-history-container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Título de la página */
+.notification-history-title {
+  color: #1c802d; /* Verde similar al de tu dashboard */
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Estilos para la lista de notificaciones */
+.notification-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Estilos para cada tarjeta de notificación */
+.notification-card {
+  position: relative; /* Necesario para posicionar el botón */
+  background-color: #fafafa; /* Fondo suave para las tarjetas */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #1c802d; /* Borde verde similar al color de tu dashboard */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notification-card:hover {
+  transform: translateY(-5px); /* Efecto de levantado al pasar el ratón */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Título de cada notificación */
+.notification-card h3 {
+  font-size: 1.5rem;
+  color: #1c802d; /* Color verde */
+  margin-bottom: 10px;
+}
+
+/* Estilo de los párrafos dentro de las tarjetas de notificación */
+.notification-card p {
+  font-size: 1rem;
+  color: #666666;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+/* Estilos para el botón de "Volver" */
+.back-button {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  color: white;
+  background-color: #1c802d; /* Rojo para el botón de volver */
+  cursor: pointer;
+  text-transform: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  color: white;
+  background-color: #1c802d; /* Rojo más oscuro en hover */
+}
+
+/* Estilo para el mensaje de "No hay notificaciones disponibles" */
+.notification-history-list p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888888;
+  font-style: italic;
+}
+
+/* Estilos adicionales para las tarjetas */
+.notification-card p strong {
+  color: #1c802d;
+}
+
+/* Estilo para los botones de eliminar dentro de las tarjetas de notificación */
+.delete-button {
+  top: 15px;  /* Posicionamos el botón cerca de la parte superior */
+  right: 15px; /* Lo alineamos a la derecha */
+  background-color: #ff5252;  /* Color rojo */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #e53935; /* Rojo más oscuro cuando pasa el mouse */
+}

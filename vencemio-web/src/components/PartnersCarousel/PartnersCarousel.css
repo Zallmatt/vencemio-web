@@ -1,0 +1,32 @@
+.partners-carousel {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #eeea17, #76c043); /* Fondo degradado */
+    color: white;
+  }
+  
+  .carousel-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .partner-logo {
+    width: 200px; /* Ancho fijo */
+    height: 200px; /* Alto fijo */
+    object-fit: contain; /* Mantiene las proporciones del logo dentro del tamaño definido */
+    transition: transform 0.3s ease;
+    display: block; /* Asegura que cada imagen sea un bloque independiente */
+    margin: 0 auto; /* Centra los logos dentro de su contenedor */
+  }
+  
+  .partner-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px; /* Altura del contenedor, ajusta según lo necesario */
+  }  
+  
+  .partner-logo:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+  }
+  

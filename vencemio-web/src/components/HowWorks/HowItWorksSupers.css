@@ -1,0 +1,98 @@
+.how-it-works {
+  padding: 50px 20px;
+  padding-top: 9%;
+  background-color: #FFF5CC; /* Amarillo suave */
+  text-align: center;
+}
+
+.how-it-works-title {
+  font-size: 60px;
+  color: #1c802d; /* Verde oscuro */
+  margin-bottom: 10px;
+}
+
+.how-it-works-subtitle {
+  font-size: 25px;
+  color: #1c802d; /* Verde claro */
+  margin-bottom: 30px;
+}
+
+.steps-container {
+  display: flex; /* Alineación en fila */
+  flex-wrap: nowrap; /* Permitir salto de línea si no hay espacio */
+  justify-content: space-around; /* Espaciado uniforme entre los elementos */
+  gap: 20px; /* Espaciado entre elementos */
+  max-width: 1200px; /* Limitar el ancho máximo del contenedor */
+  margin: 0 auto; /* Centrar el contenedor horizontalmente */
+  flex-direction: row;
+}
+
+.step {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s;
+  border-top: 4px solid #fcc40b; /* Línea superior amarilla */
+}
+
+.step:hover {
+  transform: translateY(-10px);
+}
+
+.step-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.step-title {
+  font-size: 20px;
+  color: #4c7c54; /* Verde oscuro */
+  margin-bottom: 10px;
+}
+
+.step-description {
+  font-size: 16px;
+  color: #4c7c54; /* Verde claro */
+  line-height: 1.5;
+}
+
+.how-it-works-action {
+  margin-top: 40px;
+}
+
+.action-button {
+  background-color: #1c802d; /* Verde oscuro */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #fcc40b; /* Amarillo vibrante */
+}
+
+@media (max-width: 1024px) {
+  .step {
+    width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .step {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .step {
+    width: 100%;
+  }
+}

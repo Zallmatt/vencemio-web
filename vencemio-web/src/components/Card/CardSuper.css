@@ -1,0 +1,60 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto !important;  /* Cambia a auto para que se ajuste dinámicamente */
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between !important;
+  margin-top: auto !important; /* Esto fuerza que los botones se alineen al final */
+  padding: 10px !important;
+}
+
+.edit-button,
+.delete-button {
+  margin: 0 5px !important; /* Espaciado entre botones */
+  padding: 8px !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  border-radius: 4px !important;
+  border: none !important;
+  cursor: pointer !important;
+  width: 48% !important; /* Ajusta el ancho de los botones para que no se desborden */
+}
+
+.edit-button {
+  background-color: #4caf50 !important; /* Verde */
+  color: white !important;
+  transition: background-color 0.3s !important;
+}
+
+.edit-button:hover {
+  background-color: #45a049 !important; /* Verde más oscuro */
+}
+
+.delete-button {
+  background-color: #ff5252 !important; /* Rojo */
+  color: white !important;
+  transition: background-color 0.3s !important;
+}
+
+.delete-button:hover {
+  background-color: #e53935 !important; /* Rojo más oscuro */
+}
+
+/* Estilos para el stock */
+.card-stock {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.in-stock {
+  color: green !important; /* Color verde para productos en stock */
+}
+
+.out-of-stock {
+  color: red !important; /* Color rojo para productos agotados */
+  font-weight: bold !important;
+}
