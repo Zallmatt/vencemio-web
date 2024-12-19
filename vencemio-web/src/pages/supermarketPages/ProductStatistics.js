@@ -307,15 +307,23 @@ const ProductStatistics = () => {
   
     // 2. Agregar todas las ventas
     if (sales.length > 0) {
+      const filteredSales = sales.filter(
+        (sale) => sale.cod_super === superuser.cod_super // Filtrar solo las ventas del supermercado del usuario
+      );
+  
       const salesSheet = XLSX.utils.json_to_sheet(
-        sales.map((sale) => ({
-          ID: sale.id,
-          "Producto ID": sale.producto_id,
-          "Cantidad Vendida": sale.cantidad,
-          Total: sale.total,
-          "Fecha Venta": sale.fecha,
-          "Código Supermercado": sale.cod_super,
-        }))
+        filteredSales.map((sale) => {
+          const product = products.find((p) => p.id === sale.producto_id);
+          return {
+            "Nombre del Producto": product ? product.nombre : "Desconocido",
+            "Precio Original": product ? product.precio : "N/A",
+            "Precio con Descuento": product ? product.precio_descuento : "N/A",
+            "Porcentaje Descuento": product ? product.porcentaje_descuento : "N/A",
+            "Cantidad Vendida": sale.cantidad,
+            Total: sale.total,
+            "Fecha Venta": sale.fecha,
+          };
+        })
       );
       XLSX.utils.book_append_sheet(workbook, salesSheet, "Ventas");
     }
