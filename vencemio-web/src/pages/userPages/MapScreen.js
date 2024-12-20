@@ -31,6 +31,7 @@ const MapScreen = () => {
       "Parada Canga": "/assets/logo_paradacanga.png",
       Facor: "/assets/logo_facor.png",
       Tatu: "/assets/logo_tatu.png",
+      "ChangoMas": "/assets/logo_changomas.png",
     };
   
     return icons[supermarketName] || "/assets/default_icon.png"; // Usa un ícono genérico si no hay coincidencia
