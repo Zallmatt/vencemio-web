@@ -1,6 +1,7 @@
 .notification-manager-page {
-  background-image: linear-gradient(#FFF5CC, #fff5ccef); /* Gradiente amarillo suave */
+  background-image: linear-gradient(#FFF5CC, #fff5ccef);
 }
+
 
 .notification-manager-container {
   display: flex;

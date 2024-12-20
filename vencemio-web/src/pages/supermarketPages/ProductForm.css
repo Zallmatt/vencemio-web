@@ -106,7 +106,7 @@
     display: flex;
     justify-content: center;  /* Centra los contenidos horizontalmente */
     align-items: center;  /* Centra los contenidos verticalmente */
-    height: 100vh;  /* Altura completa de la ventana */
+    height: 100%;  /* Altura completa de la ventana */
     flex-direction: column
   }
   .product-form-container {

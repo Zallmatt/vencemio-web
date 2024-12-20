@@ -21,22 +21,21 @@ const MapScreen = () => {
   const navigate = useNavigate(); // Hook para redirigir
 
   const getSupermarketIcon = (supermarketName) => {
-    const normalizeName = (name) =>
-      name.toLowerCase().replace(/\s+/g, "").replace(/[áéíóúñ]/g, (match) => {
-        const map = { á: "a", é: "e", í: "i", ó: "o", ú: "u", ñ: "n" };
-        return map[match];
-      });
-
     const icons = {
-      impulso: "/assets/logo_impulso.png",
-      carrefour: "/assets/logo_carrefour.png",
-      elsuper: "/assets/logo_elsuper.png",
-      supermax: "/assets/logo_supermax.png",
-      lareina: "/assets/logo_lareina.png",
+      Impulso: "/assets/logo_impulso.png",
+      Carrefour: "/assets/logo_carrefour.png",
+      "El Super": "/assets/logo_elsuper.png",
+      Supermax: "/assets/logo_supermax.png",
+      "La Reina": "/assets/logo_lareina.png",
+      Depot: "/assets/logo_depot.png",
+      "Parada Canga": "/assets/logo_paradacanga.png",
+      Facor: "/assets/logo_facor.png",
+      Tatu: "/assets/logo_tatu.png",
     };
-
-    return icons[normalizeName(supermarketName)] || null; // Si no tiene icono, devolver null
+  
+    return icons[supermarketName] || "/assets/default_icon.png"; // Usa un ícono genérico si no hay coincidencia
   };
+  
 
   useEffect(() => {
     const fetchLocations = async () => {
@@ -187,19 +186,18 @@ const MapScreen = () => {
               )}
 
               {locations.map((location) => {
-                const icon = getSupermarketIcon(location.name); // Obtener icono si existe
+                const icon = getSupermarketIcon(location.name);
                 return (
-                  icon && (
-                    <Marker
-                      key={location.id}
-                      position={{ lat: location.lat, lng: location.lng }}
-                      icon={{
-                        url: icon,
-                        scaledSize: new window.google.maps.Size(40, 40),
-                      }}
-                      onClick={() => setSelected(location)}
-                    />
-                  )
+                  <Marker
+                    key={location.id}
+                    position={{ lat: location.lat, lng: location.lng }}
+                    icon={
+                      icon
+                        ? { url: icon, scaledSize: new window.google.maps.Size(40, 40) } // Ícono personalizado
+                        : null // Marcador estándar de Google Maps
+                    }
+                    onClick={() => setSelected(location)}
+                  />
                 );
               })}
 
