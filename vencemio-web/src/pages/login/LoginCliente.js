@@ -18,7 +18,7 @@ function LoginCliente() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
       });
-      
+
       const data = await response.json();
 
       if (response.ok) {
@@ -74,6 +74,12 @@ function LoginCliente() {
           onClick={() => navigate("/register-user")} // Navega a la página de registro
         >
           ¿No tienes cuenta? Crear cuenta
+        </button>
+        <button
+          className="recover-button"
+          onClick={() => navigate("/recovery")} // Navega a la página de recuperación
+        >
+          ¿Olvidaste tu contraseña? Recuperar cuenta
         </button>
       </div>
     </div>

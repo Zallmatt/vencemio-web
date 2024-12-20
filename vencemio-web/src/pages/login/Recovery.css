@@ -1,0 +1,44 @@
+.recover-super {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#FFF5CC, #fff5ccef);
+  }
+  
+  .recover-super-container {
+    width: 400px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .recover-super-container h1 {
+    margin-bottom: 20px;
+    color: #1c802d;
+  }
+  
+  .recover-super-container p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .recover-super-container ul {
+    text-align: left;
+    margin: 10px 0 20px;
+    padding-left: 20px;
+    color: #555;
+  }
+  
+  .recover-super-container ul li {
+    margin-bottom: 10px;
+  }
+  
+  .recover-super-container strong {
+    color: #1c802d;
+  }
+  

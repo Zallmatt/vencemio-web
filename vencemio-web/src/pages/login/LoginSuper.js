@@ -67,9 +67,15 @@ function LoginSuper() {
         </form>
         <button
           className="register-button"
-          onClick={() => navigate("/register-super")} // Navega a la página de registro
+          onClick={() => navigate("/register-super")}
         >
           ¿No tienes cuenta? Crear cuenta
+        </button>
+        <button
+          className="recover-button"
+          onClick={() => navigate("/recovery")}
+        >
+          ¿Olvidaste tu contraseña? Recuperar cuenta
         </button>
       </div>
     </div>

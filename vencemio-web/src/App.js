@@ -20,6 +20,7 @@ import CompraPage from "./pages/userPages/CompraPage";
 import PurchaseHistoryPage from "./pages/userPages/PurchaseHistoryPage";
 import { UserProvider } from "./context/UserContext";
 import { AuthProvider } from "./context/AuthContext"; // Importa AuthProvider
+import RecoverSuper from "./pages/login/Recovery";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
             <Route path="/estadisticas" element={<ProductStatistics />} />
             <Route path="/comprar/:id" element={<CompraPage />} />
             <Route path="/historial-compras" element={<PurchaseHistoryPage />} />
+            <Route path="/recovery" element={<RecoverSuper />} />
           </Routes>
         </UserProvider>
       </AuthProvider>

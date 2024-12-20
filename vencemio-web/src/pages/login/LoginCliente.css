@@ -71,16 +71,19 @@
   cursor: not-allowed;
 }
 
-.register-button {
+.register-button,
+.recover-button {
   margin-top: 10px;
+  padding: 10px;
   background-color: #1c802d !important;
   border: none;
   cursor: pointer;
   text-decoration: underline;
   font-size: 14px;
-  transition: color 0.3s;
+  transition: background-color 0.3s;
 }
 
-.register-button:hover {
+.register-button:hover,
+.recover-button:hover {
   background-color: #76c043 !important; /* Verde medio */
 }
